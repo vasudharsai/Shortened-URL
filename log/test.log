@@ -1,0 +1,440 @@
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "urls"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "urls" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "original_url" varchar, "shortened_url" varchar, "count" integer DEFAULT 0, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUrls (20190103040816)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "urls" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "original_url" varchar, "shortened_url" varchar, "count" integer DEFAULT 0, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190103040816"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2019-01-06 05:13:13.471454"], ["updated_at", "2019-01-06 05:13:13.471454"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by UrlsController#create as HTML
+  Parameters: {"original_url"=>"https://netflix.com"}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://netflix.com"], ["LIMIT", 1]]
+  [1m[36mUrl Create (0.6ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "shortened_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["original_url", "http://netflix.com"], ["shortened_url", "vyVQQg"], ["created_at", "2019-01-06 05:16:56.136488"], ["updated_at", "2019-01-06 05:16:56.136488"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/urls/1
+Completed 302 Found in 20375ms (ActiveRecord: 6.4ms)
+  [1m[36mUrl Load (0.1ms)[0m  [1m[34mSELECT "urls".* FROM "urls"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by UrlsController#create as HTML
+  Parameters: {"original_url"=>"https://netflix.com"}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://netflix.com"], ["LIMIT", 1]]
+  [1m[36mUrl Create (0.7ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "shortened_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["original_url", "http://netflix.com"], ["shortened_url", "0BNu8S"], ["created_at", "2019-01-06 05:24:54.127626"], ["updated_at", "2019-01-06 05:24:54.127626"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/urls/1
+Completed 302 Found in 1811ms (ActiveRecord: 1.5ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by UrlsController#create as HTML
+  Parameters: {"original_url"=>"https://netflix.com"}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://netflix.com"], ["LIMIT", 1]]
+  [1m[36mUrl Create (0.4ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "shortened_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["original_url", "http://netflix.com"], ["shortened_url", "1Jldjp"], ["created_at", "2019-01-06 05:26:06.579618"], ["updated_at", "2019-01-06 05:26:06.579618"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/urls/1
+Completed 302 Found in 1371ms (ActiveRecord: 1.1ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by UrlsController#create as HTML
+  Parameters: {"original_url"=>"https://netflix.com"}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://netflix.com"], ["LIMIT", 1]]
+  [1m[36mUrl Create (0.8ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "shortened_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["original_url", "http://netflix.com"], ["shortened_url", "weivKz"], ["created_at", "2019-01-06 05:30:58.715424"], ["updated_at", "2019-01-06 05:30:58.715424"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/urls/1
+Completed 302 Found in 24ms (ActiveRecord: 1.8ms)
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."origianl_url" = ? LIMIT ?[0m  [["origianl_url", "https://netflix.com"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by UrlsController#create as HTML
+  Parameters: {"original_url"=>"https://netflix.com"}
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://netflix.com"], ["LIMIT", 1]]
+  [1m[36mUrl Create (0.3ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "shortened_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["original_url", "http://netflix.com"], ["shortened_url", "Z6XQPC"], ["created_at", "2019-01-06 05:31:13.567184"], ["updated_at", "2019-01-06 05:31:13.567184"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/urls/1
+Completed 302 Found in 10ms (ActiveRecord: 0.8ms)
+  [1m[36mUrl Load (0.1ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://netflix.com"], ["LIMIT", 1]]
+  [1m[35m (1.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by UrlsController#create as HTML
+  Parameters: {"original_url"=>"https://netflix.com"}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://netflix.com"], ["LIMIT", 1]]
+  [1m[36mUrl Create (0.5ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "shortened_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["original_url", "http://netflix.com"], ["shortened_url", "O2sPs1"], ["created_at", "2019-01-06 05:31:45.204347"], ["updated_at", "2019-01-06 05:31:45.204347"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/urls/1
+Completed 302 Found in 15ms (ActiveRecord: 1.1ms)
+  [1m[36mUrl Load (0.1ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "https://netflix.com"], ["LIMIT", 1]]
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT "urls".* FROM "urls"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by UrlsController#create as HTML
+  Parameters: {"original_url"=>"http://netflix.com"}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "http://netflix.com"], ["LIMIT", 1]]
+  [1m[36mUrl Create (0.3ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "shortened_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["original_url", "http://netflix.com"], ["shortened_url", "yswtm6"], ["created_at", "2019-01-06 05:32:19.413236"], ["updated_at", "2019-01-06 05:32:19.413236"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/urls/1
+Completed 302 Found in 20ms (ActiveRecord: 1.0ms)
+  [1m[36mUrl Load (0.1ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "http://netflix.com"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Processing by UrlsController#create as HTML
+  Parameters: {"original_url"=>"http://netflix.com"}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "http://netflix.com"], ["LIMIT", 1]]
+  [1m[36mUrl Create (0.5ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "shortened_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["original_url", "http://netflix.com"], ["shortened_url", "kDbGpN"], ["created_at", "2019-01-06 05:32:44.949184"], ["updated_at", "2019-01-06 05:32:44.949184"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/urls/1
+Completed 302 Found in 13ms (ActiveRecord: 1.1ms)
+  [1m[36mUrl Load (0.1ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "http://netflix.com"], ["LIMIT", 1]]
+  [1m[35m (1.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "http://netflix.com"], ["LIMIT", 1]]
+  [1m[36mUrl Create (0.6ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "shortened_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["original_url", "http://netflix.com"], ["shortened_url", "vVPAax"], ["created_at", "2019-01-06 05:43:35.075159"], ["updated_at", "2019-01-06 05:43:35.075159"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Processing by UrlsController#create as HTML
+  Parameters: {"original_url"=>"http://netflix.com"}
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "http://netflix.com"], ["LIMIT", 1]]
+  [1m[36mUrl Create (0.7ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "shortened_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["original_url", "http://netflix.com"], ["shortened_url", "5P8I85"], ["created_at", "2019-01-06 05:46:02.338591"], ["updated_at", "2019-01-06 05:46:02.338591"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/urls/1
+Completed 302 Found in 12ms (ActiveRecord: 1.5ms)
+  [1m[36mUrl Load (0.1ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "http://netflix.com"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "dolornihilplaceat"], ["LIMIT", 1]]
+  [1m[36mUrl Create (0.6ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "shortened_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["original_url", "http://dolornihilplaceat"], ["shortened_url", "l8Dm7m"], ["created_at", "2019-01-06 05:49:06.861941"], ["updated_at", "2019-01-06 05:49:06.861941"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.9ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "adipiscirepellendusvero"], ["LIMIT", 1]]
+  [1m[36mUrl Create (0.6ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "shortened_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["original_url", "http://adipiscirepellendusvero"], ["shortened_url", "jOI6UY"], ["created_at", "2019-01-06 05:52:26.677046"], ["updated_at", "2019-01-06 05:52:26.677046"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "etsuscipitcorrupti"], ["LIMIT", 1]]
+  [1m[36mUrl Create (0.3ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "shortened_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["original_url", "http://etsuscipitcorrupti"], ["shortened_url", "BhnAih"], ["created_at", "2019-01-06 05:53:55.125759"], ["updated_at", "2019-01-06 05:53:55.125759"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by UrlsController#show as HTML
+  Parameters: {"shortened_url"=>"BhnAih"}
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."shortened_url" = ? LIMIT ?[0m  [["shortened_url", "BhnAih"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Update (0.4ms)[0m  [1m[33mUPDATE "urls" SET "count" = ?, "updated_at" = ? WHERE "urls"."id" = ?[0m  [["count", 1], ["updated_at", "2019-01-06 05:54:04.652896"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 7813ms (Views: 0.4ms | ActiveRecord: 0.9ms)
+  [1m[35m (1.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by UrlsController#create as HTML
+  Parameters: {"original_url"=>"http://netflix.com"}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "http://netflix.com"], ["LIMIT", 1]]
+  [1m[36mUrl Create (0.4ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "shortened_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["original_url", "http://netflix.com"], ["shortened_url", "S0uEYP"], ["created_at", "2019-01-06 06:12:41.280259"], ["updated_at", "2019-01-06 06:12:41.280259"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/urls/1
+Completed 302 Found in 12ms (ActiveRecord: 1.1ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "utaccusantiumest"], ["LIMIT", 1]]
+  [1m[36mUrl Create (0.3ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "shortened_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["original_url", "http://utaccusantiumest"], ["shortened_url", "oMQl5n"], ["created_at", "2019-01-06 06:12:41.392564"], ["updated_at", "2019-01-06 06:12:41.392564"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by UrlsController#show as HTML
+  Parameters: {"shortened_url"=>"oMQl5n"}
+  [1m[36mUrl Load (0.1ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."shortened_url" = ? LIMIT ?[0m  [["shortened_url", "oMQl5n"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Update (0.1ms)[0m  [1m[33mUPDATE "urls" SET "count" = ?, "updated_at" = ? WHERE "urls"."id" = ?[0m  [["count", 1], ["updated_at", "2019-01-06 06:12:41.396873"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "quiasequienim"], ["LIMIT", 1]]
+  [1m[36mUrl Create (0.3ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "shortened_url", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_url", "http://quiasequienim"], ["shortened_url", "pqWI0B"], ["count", 1], ["created_at", "2019-01-06 06:23:51.095067"], ["updated_at", "2019-01-06 06:23:51.095067"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "suntquiquisquam"], ["LIMIT", 1]]
+  [1m[36mUrl Create (0.1ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "shortened_url", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_url", "http://suntquiquisquam"], ["shortened_url", "U8hSXv"], ["count", 2], ["created_at", "2019-01-06 06:23:51.097173"], ["updated_at", "2019-01-06 06:23:51.097173"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "atquecorporisrepellendus"], ["LIMIT", 1]]
+  [1m[36mUrl Create (0.1ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "shortened_url", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_url", "http://atquecorporisrepellendus"], ["shortened_url", "mZKr5P"], ["count", 3], ["created_at", "2019-01-06 06:23:51.098461"], ["updated_at", "2019-01-06 06:23:51.098461"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "utveniammaiores"], ["LIMIT", 1]]
+  [1m[36mUrl Create (0.3ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "shortened_url", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_url", "http://utveniammaiores"], ["shortened_url", "SFUffI"], ["count", 1], ["created_at", "2019-01-06 06:24:04.751366"], ["updated_at", "2019-01-06 06:24:04.751366"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "nostrumpraesentiumillum"], ["LIMIT", 1]]
+  [1m[36mUrl Create (0.1ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "shortened_url", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_url", "http://nostrumpraesentiumillum"], ["shortened_url", "RXrZGf"], ["count", 2], ["created_at", "2019-01-06 06:24:04.753267"], ["updated_at", "2019-01-06 06:24:04.753267"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "fugiatnesciuntut"], ["LIMIT", 1]]
+  [1m[36mUrl Create (0.1ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "shortened_url", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_url", "http://fugiatnesciuntut"], ["shortened_url", "JiQC25"], ["count", 3], ["created_at", "2019-01-06 06:24:04.754502"], ["updated_at", "2019-01-06 06:24:04.754502"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by UrlsController#top_urls as HTML
+  [1m[36mUrl Load (0.1ms)[0m  [1m[34mSELECT "urls".* FROM "urls"[0m
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+  [1m[35m (1.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "suscipitquibusdamtempore"], ["LIMIT", 1]]
+  [1m[36mUrl Create (0.5ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "shortened_url", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_url", "http://suscipitquibusdamtempore"], ["shortened_url", "vdfwND"], ["count", 1], ["created_at", "2019-01-06 06:26:59.829386"], ["updated_at", "2019-01-06 06:26:59.829386"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "temporeassumendasit"], ["LIMIT", 1]]
+  [1m[36mUrl Create (0.1ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "shortened_url", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_url", "http://temporeassumendasit"], ["shortened_url", "Skr583"], ["count", 2], ["created_at", "2019-01-06 06:26:59.832181"], ["updated_at", "2019-01-06 06:26:59.832181"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "voluptascorporisquidem"], ["LIMIT", 1]]
+  [1m[36mUrl Create (0.1ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "shortened_url", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_url", "http://voluptascorporisquidem"], ["shortened_url", "NRhojV"], ["count", 3], ["created_at", "2019-01-06 06:26:59.834003"], ["updated_at", "2019-01-06 06:26:59.834003"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by UrlsController#top_urls as HTML
+  [1m[36mUrl Load (0.1ms)[0m  [1m[34mSELECT "urls".* FROM "urls"[0m
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+  [1m[35m (1.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by UrlsController#create as HTML
+  Parameters: {"original_url"=>"http://netflix.com"}
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "http://netflix.com"], ["LIMIT", 1]]
+  [1m[36mUrl Create (0.4ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "shortened_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["original_url", "http://netflix.com"], ["shortened_url", "1FfoQe"], ["created_at", "2019-01-06 06:30:57.949221"], ["updated_at", "2019-01-06 06:30:57.949221"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/urls/1
+Completed 302 Found in 10ms (ActiveRecord: 0.9ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "voluptatibusmagnirepudiandae"], ["LIMIT", 1]]
+  [1m[36mUrl Create (0.3ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "shortened_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["original_url", "http://voluptatibusmagnirepudiandae"], ["shortened_url", "ufBz7i"], ["created_at", "2019-01-06 06:30:58.050118"], ["updated_at", "2019-01-06 06:30:58.050118"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by UrlsController#show as HTML
+  Parameters: {"shortened_url"=>"ufBz7i"}
+  [1m[36mUrl Load (0.1ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."shortened_url" = ? LIMIT ?[0m  [["shortened_url", "ufBz7i"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Update (0.1ms)[0m  [1m[33mUPDATE "urls" SET "count" = ?, "updated_at" = ? WHERE "urls"."id" = ?[0m  [["count", 1], ["updated_at", "2019-01-06 06:30:58.054757"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "harumnatuslabore"], ["LIMIT", 1]]
+  [1m[36mUrl Create (0.3ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "shortened_url", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_url", "http://harumnatuslabore"], ["shortened_url", "5HeEfe"], ["count", 1], ["created_at", "2019-01-06 06:30:58.058544"], ["updated_at", "2019-01-06 06:30:58.058544"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "etdoloremqueofficia"], ["LIMIT", 1]]
+  [1m[36mUrl Create (0.1ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "shortened_url", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_url", "http://etdoloremqueofficia"], ["shortened_url", "Y2epn5"], ["count", 2], ["created_at", "2019-01-06 06:30:58.060240"], ["updated_at", "2019-01-06 06:30:58.060240"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "sednecessitatibusvoluptatibus"], ["LIMIT", 1]]
+  [1m[36mUrl Create (0.1ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "shortened_url", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_url", "http://sednecessitatibusvoluptatibus"], ["shortened_url", "Cy4Dx7"], ["count", 3], ["created_at", "2019-01-06 06:30:58.061618"], ["updated_at", "2019-01-06 06:30:58.061618"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by UrlsController#top_urls as HTML
+  [1m[36mUrl Load (0.1ms)[0m  [1m[34mSELECT "urls".* FROM "urls"[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+  [1m[36mUrl Load (0.1ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."count" = ? LIMIT ?[0m  [["count", 3], ["LIMIT", 1]]
+  [1m[36mUrl Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."count" = ? LIMIT ?[0m  [["count", 2], ["LIMIT", 1]]
+  [1m[36mUrl Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."count" = ? LIMIT ?[0m  [["count", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Processing by UrlsController#create as HTML
+  Parameters: {"original_url"=>"http://netflix.com"}
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "http://netflix.com"], ["LIMIT", 1]]
+  [1m[36mUrl Create (0.3ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "shortened_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["original_url", "http://netflix.com"], ["shortened_url", "XM422w"], ["created_at", "2019-01-06 06:31:49.365566"], ["updated_at", "2019-01-06 06:31:49.365566"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/urls/1
+Completed 302 Found in 11ms (ActiveRecord: 1.1ms)
+  [1m[35m (1.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "eaqueconsequaturlibero"], ["LIMIT", 1]]
+  [1m[36mUrl Create (0.4ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "shortened_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["original_url", "http://eaqueconsequaturlibero"], ["shortened_url", "9IjnlR"], ["created_at", "2019-01-06 06:31:49.431649"], ["updated_at", "2019-01-06 06:31:49.431649"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by UrlsController#show as HTML
+  Parameters: {"shortened_url"=>"9IjnlR"}
+  [1m[36mUrl Load (0.1ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."shortened_url" = ? LIMIT ?[0m  [["shortened_url", "9IjnlR"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Update (0.1ms)[0m  [1m[33mUPDATE "urls" SET "count" = ?, "updated_at" = ? WHERE "urls"."id" = ?[0m  [["count", 1], ["updated_at", "2019-01-06 06:31:49.435567"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+  [1m[35m (1.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "adipisciillovoluptatum"], ["LIMIT", 1]]
+  [1m[36mUrl Create (0.3ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "shortened_url", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_url", "http://adipisciillovoluptatum"], ["shortened_url", "B8yok2"], ["count", 1], ["created_at", "2019-01-06 06:31:49.440315"], ["updated_at", "2019-01-06 06:31:49.440315"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "perferendisreiciendisrepellendus"], ["LIMIT", 1]]
+  [1m[36mUrl Create (0.1ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "shortened_url", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_url", "http://perferendisreiciendisrepellendus"], ["shortened_url", "TrbjC9"], ["count", 2], ["created_at", "2019-01-06 06:31:49.442343"], ["updated_at", "2019-01-06 06:31:49.442343"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "voluptashiceum"], ["LIMIT", 1]]
+  [1m[36mUrl Create (0.1ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "shortened_url", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_url", "http://voluptashiceum"], ["shortened_url", "mNaf6m"], ["count", 3], ["created_at", "2019-01-06 06:31:49.443912"], ["updated_at", "2019-01-06 06:31:49.443912"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by UrlsController#top_urls as HTML
+  [1m[36mUrl Load (0.1ms)[0m  [1m[34mSELECT "urls".* FROM "urls"[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+  [1m[36mUrl Load (0.1ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."count" = ? LIMIT ?[0m  [["count", 3], ["LIMIT", 1]]
+  [1m[36mUrl Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."count" = ? LIMIT ?[0m  [["count", 2], ["LIMIT", 1]]
+  [1m[36mUrl Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."count" = ? LIMIT ?[0m  [["count", 1], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "nonvoluptatumdeleniti"], ["LIMIT", 1]]
+  [1m[36mUrl Create (0.4ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "shortened_url", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_url", "http://nonvoluptatumdeleniti"], ["shortened_url", "fItQ2g"], ["count", 1], ["created_at", "2019-01-06 06:36:06.957228"], ["updated_at", "2019-01-06 06:36:06.957228"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "sequilaborumquam"], ["LIMIT", 1]]
+  [1m[36mUrl Create (0.1ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "shortened_url", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_url", "http://sequilaborumquam"], ["shortened_url", "JRI5A7"], ["count", 2], ["created_at", "2019-01-06 06:36:06.959598"], ["updated_at", "2019-01-06 06:36:06.959598"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "minimasintautem"], ["LIMIT", 1]]
+  [1m[36mUrl Create (0.1ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "shortened_url", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_url", "http://minimasintautem"], ["shortened_url", "RYaIm5"], ["count", 3], ["created_at", "2019-01-06 06:36:06.961038"], ["updated_at", "2019-01-06 06:36:06.961038"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by UrlsController#top_urls as HTML
+  [1m[36mUrl Load (0.1ms)[0m  [1m[34mSELECT "urls".* FROM "urls"[0m
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+  [1m[36mUrl Load (0.1ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."count" = ? LIMIT ?[0m  [["count", 3], ["LIMIT", 1]]
+  [1m[36mUrl Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."count" = ? LIMIT ?[0m  [["count", 2], ["LIMIT", 1]]
+  [1m[36mUrl Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."count" = ? LIMIT ?[0m  [["count", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by UrlsController#create as HTML
+  Parameters: {"original_url"=>"http://netflix.com"}
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "http://netflix.com"], ["LIMIT", 1]]
+  [1m[36mUrl Create (0.7ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "shortened_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["original_url", "http://netflix.com"], ["shortened_url", "c2P8La"], ["created_at", "2019-01-06 06:36:10.744782"], ["updated_at", "2019-01-06 06:36:10.744782"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/urls/1
+Completed 302 Found in 12ms (ActiveRecord: 1.3ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "doloremperspiciatisat"], ["LIMIT", 1]]
+  [1m[36mUrl Create (0.4ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "shortened_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["original_url", "http://doloremperspiciatisat"], ["shortened_url", "J6ZUMB"], ["created_at", "2019-01-06 06:36:10.819529"], ["updated_at", "2019-01-06 06:36:10.819529"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by UrlsController#show as HTML
+  Parameters: {"shortened_url"=>"J6ZUMB"}
+  [1m[36mUrl Load (0.1ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."shortened_url" = ? LIMIT ?[0m  [["shortened_url", "J6ZUMB"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Update (0.1ms)[0m  [1m[33mUPDATE "urls" SET "count" = ?, "updated_at" = ? WHERE "urls"."id" = ?[0m  [["count", 1], ["updated_at", "2019-01-06 06:36:10.824258"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+  [1m[35m (1.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "optioaliquidquisquam"], ["LIMIT", 1]]
+  [1m[36mUrl Create (0.3ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "shortened_url", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_url", "http://optioaliquidquisquam"], ["shortened_url", "MLVXaT"], ["count", 1], ["created_at", "2019-01-06 06:36:10.829942"], ["updated_at", "2019-01-06 06:36:10.829942"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "quasiutcupiditate"], ["LIMIT", 1]]
+  [1m[36mUrl Create (0.1ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "shortened_url", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_url", "http://quasiutcupiditate"], ["shortened_url", "dU5CRY"], ["count", 2], ["created_at", "2019-01-06 06:36:10.832044"], ["updated_at", "2019-01-06 06:36:10.832044"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "commodiconsequunturconsequatur"], ["LIMIT", 1]]
+  [1m[36mUrl Create (0.1ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "shortened_url", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_url", "http://commodiconsequunturconsequatur"], ["shortened_url", "AYc5t9"], ["count", 3], ["created_at", "2019-01-06 06:36:10.833445"], ["updated_at", "2019-01-06 06:36:10.833445"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by UrlsController#top_urls as HTML
+  [1m[36mUrl Load (0.1ms)[0m  [1m[34mSELECT "urls".* FROM "urls"[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+  [1m[36mUrl Load (0.1ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."count" = ? LIMIT ?[0m  [["count", 3], ["LIMIT", 1]]
+  [1m[36mUrl Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."count" = ? LIMIT ?[0m  [["count", 2], ["LIMIT", 1]]
+  [1m[36mUrl Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."count" = ? LIMIT ?[0m  [["count", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Processing by UrlsController#create as HTML
+  Parameters: {"original_url"=>"http://netflix.com"}
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "http://netflix.com"], ["LIMIT", 1]]
+  [1m[36mUrl Create (0.4ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "shortened_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["original_url", "http://netflix.com"], ["shortened_url", "7Pto0C"], ["created_at", "2019-01-06 06:36:14.375245"], ["updated_at", "2019-01-06 06:36:14.375245"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/urls/1
+Completed 302 Found in 10ms (ActiveRecord: 0.9ms)
+  [1m[35m (1.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "nisibeataeat"], ["LIMIT", 1]]
+  [1m[36mUrl Create (0.2ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "shortened_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["original_url", "http://nisibeataeat"], ["shortened_url", "kvV6t0"], ["created_at", "2019-01-06 06:36:14.450566"], ["updated_at", "2019-01-06 06:36:14.450566"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by UrlsController#show as HTML
+  Parameters: {"shortened_url"=>"kvV6t0"}
+  [1m[36mUrl Load (0.1ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."shortened_url" = ? LIMIT ?[0m  [["shortened_url", "kvV6t0"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Update (0.1ms)[0m  [1m[33mUPDATE "urls" SET "count" = ?, "updated_at" = ? WHERE "urls"."id" = ?[0m  [["count", 1], ["updated_at", "2019-01-06 06:36:14.453658"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "possimusautconsequatur"], ["LIMIT", 1]]
+  [1m[36mUrl Create (0.2ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "shortened_url", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_url", "http://possimusautconsequatur"], ["shortened_url", "a4uabN"], ["count", 1], ["created_at", "2019-01-06 06:36:14.456866"], ["updated_at", "2019-01-06 06:36:14.456866"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "voluptasiustounde"], ["LIMIT", 1]]
+  [1m[36mUrl Create (0.1ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "shortened_url", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_url", "http://voluptasiustounde"], ["shortened_url", "iGpp7e"], ["count", 2], ["created_at", "2019-01-06 06:36:14.458342"], ["updated_at", "2019-01-06 06:36:14.458342"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUrl Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "urls" WHERE "urls"."original_url" = ? LIMIT ?[0m  [["original_url", "aperiamducimusconsequuntur"], ["LIMIT", 1]]
+  [1m[36mUrl Create (0.1ms)[0m  [1m[32mINSERT INTO "urls" ("original_url", "shortened_url", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_url", "http://aperiamducimusconsequuntur"], ["shortened_url", "qEz5v9"], ["count", 3], ["created_at", "2019-01-06 06:36:14.459641"], ["updated_at", "2019-01-06 06:36:14.459641"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by UrlsController#top_urls as HTML
+  [1m[36mUrl Load (0.1ms)[0m  [1m[34mSELECT "urls".* FROM "urls"[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."count" = ? LIMIT ?[0m  [["count", 3], ["LIMIT", 1]]
+  [1m[36mUrl Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."count" = ? LIMIT ?[0m  [["count", 2], ["LIMIT", 1]]
+  [1m[36mUrl Load (0.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."count" = ? LIMIT ?[0m  [["count", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m

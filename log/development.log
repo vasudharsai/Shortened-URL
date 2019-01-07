@@ -1,0 +1,1970 @@
+Started GET "/inventories" for 127.0.0.1 at 2019-01-02 22:52:25 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/inventories"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-01-02 22:52:27 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/vasu/.rvm/gems/ruby-2.5.1/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/vasu/.rvm/gems/ruby-2.5.1/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (3.1ms)
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (4.9ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE DATABASE `url_shortener` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (13.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS `url_shortener`[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (28.5ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE `url_shortener` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (54.9ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (22.5ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT GET_LOCK('3560564728303329810', 0)[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateUrls (20190103040816)
+  [1m[35m (28.4ms)[0m  [1m[35mCREATE TABLE `urls` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `original_url` varchar(255), `shortened_url` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20190103040816_create_urls.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190103040816')[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2019-01-03 04:09:18', '2019-01-03 04:09:18')[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('3560564728303329810')[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/bin/rake:23
+Started GET "/url" for 127.0.0.1 at 2019-01-02 23:09:35 -0500
+  [1m[35m (0.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/url"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/urls" for 127.0.0.1 at 2019-01-02 23:09:38 -0500
+Processing by UrlsController#index as HTML
+  Rendering urls/index.html.erb within layouts/application
+  [1m[36mUrl Load (1.0ms)[0m  [1m[34mSELECT `urls`.* FROM `urls`[0m
+  ↳ app/views/urls/index.html.erb:13
+  Rendered urls/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 660ms (Views: 654.1ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/url.json" for 127.0.0.1 at 2019-01-02 23:24:23 -0500
+  [1m[35m (0.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [POST] "/url.json"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/urls.json" for 127.0.0.1 at 2019-01-02 23:25:04 -0500
+Processing by UrlsController#index as JSON
+  Rendering urls/index.json.jbuilder
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT `urls`.* FROM `urls`[0m
+  ↳ app/views/urls/index.json.jbuilder:1
+  Rendered urls/index.json.jbuilder (5.2ms)
+Completed 200 OK in 15ms (Views: 9.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-02 23:25:15 -0500
+Processing by UrlsController#create as JSON
+  Parameters: {"url"=>"https://google.com"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.2.2) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (5.2.2) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (5.2.2) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (5.2.2) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.2) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.2) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.2) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.2) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.2) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.2) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.2) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.2) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.2) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.2) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.2) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-02 23:25:19 -0500
+Processing by UrlsController#create as JSON
+  Parameters: {"url"=>"https://google.com"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.2.2) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (5.2.2) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (5.2.2) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (5.2.2) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.2) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.2) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.2) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.2) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.2) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.2) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.2) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.2) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.2) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.2) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.2) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-02 23:25:38 -0500
+Processing by UrlsController#create as JSON
+  Parameters: {"url"=>"https://google.com"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.2.2) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (5.2.2) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (5.2.2) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (5.2.2) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.2) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.2) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.2) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.2) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.2) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.2) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.2) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.2) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.2) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.2) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.2) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-02 23:27:17 -0500
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://google.com"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.2.2) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (5.2.2) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (5.2.2) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (5.2.2) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.2) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.2) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.2) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.2) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.2) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.2) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.2) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.2) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.2) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.2) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.2) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-02 23:27:28 -0500
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://google.com"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.2.2) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (5.2.2) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (5.2.2) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (5.2.2) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.2) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.2) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.2) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.2) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.2) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.2) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.2) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.2) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.2) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.2) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.2) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-02 23:29:13 -0500
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://google.com"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.2.2) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (5.2.2) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (5.2.2) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (5.2.2) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.2) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.2) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.2) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.2) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.2) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.2) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.2) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.2) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.2) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.2) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.2) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-02 23:31:07 -0500
+  [1m[35m (0.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://google.com"}
+Can't verify CSRF token authenticity.
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-02 23:35:00 -0500
+  [1m[35m (0.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://google.com"}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 14218ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: url):
+  
+app/controllers/urls_controller.rb:73:in `url_params'
+app/controllers/urls_controller.rb:28:in `create'
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-02 23:40:40 -0500
+  [1m[35m (0.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://google.com"}
+Can't verify CSRF token authenticity.
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-02 23:41:48 -0500
+  [1m[35m (0.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://google.com"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :format
+Completed 500 Internal Server Error in 12741ms (ActiveRecord: 2.2ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/urls_controller.rb:30:in `create'
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-02 23:42:56 -0500
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://google.com"}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 7823ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `const_missing'
+app/controllers/urls_controller.rb:28:in `create'
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-02 23:43:15 -0500
+  [1m[35m (0.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://google.com"}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 4000ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/urls_controller.rb:28:in `create'
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-02 23:44:48 -0500
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://google.com"}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `respond_to'
+app/controllers/urls_controller.rb:28:in `create'
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-02 23:45:01 -0500
+  [1m[35m (0.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://google.com"}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 32588ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `rescue in process_action'
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-02 23:46:22 -0500
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://google.com"}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 3391ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `respond_to'
+app/controllers/urls_controller.rb:28:in `create'
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-02 23:46:36 -0500
+  [1m[35m (0.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://google.com"}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 3395ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/urls_controller.rb:28:in `create'
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-02 23:48:13 -0500
+  [1m[35m (0.4ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://google.com"}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 5694ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/urls_controller.rb:28:in `create'
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-02 23:50:36 -0500
+  [1m[35m (0.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://google.com"}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 4235ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/urls_controller.rb:28:in `create'
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-02 23:51:15 -0500
+  [1m[35m (0.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://google.com"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.2.2) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (5.2.2) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (5.2.2) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (5.2.2) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.2) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.2) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.2) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.2) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.2) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.2) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.2) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.2) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.2) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.2) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.2) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/urls.json" for 127.0.0.1 at 2019-01-02 23:51:36 -0500
+Processing by UrlsController#index as JSON
+  Rendering urls/index.json.jbuilder
+  [1m[36mUrl Load (0.5ms)[0m  [1m[34mSELECT `urls`.* FROM `urls`[0m
+  ↳ app/views/urls/index.json.jbuilder:1
+  Rendered urls/index.json.jbuilder (3.7ms)
+Completed 200 OK in 21ms (Views: 7.9ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-05 17:31:05 -0500
+  [1m[35m (1.2ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (undefined method `skip_before_filter' for UrlsController:Class
+Did you mean?  skip_before_action):
+  
+app/controllers/urls_controller.rb:2:in `<class:UrlsController>'
+app/controllers/urls_controller.rb:1:in `<main>'
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-05 17:32:35 -0500
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://google.com"}
+Completed 500 Internal Server Error in 14284ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/urls_controller.rb:30:in `create'
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-05 17:36:34 -0500
+  [1m[35m (0.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://google.com"}
+Completed 500 Internal Server Error in 23056ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: url):
+  
+app/controllers/urls_controller.rb:77:in `url_params'
+app/controllers/urls_controller.rb:30:in `create'
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-05 17:37:02 -0500
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://google.com"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `const_missing'
+app/controllers/urls_controller.rb:30:in `create'
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-05 17:37:17 -0500
+  [1m[35m (0.6ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://google.com"}
+Unpermitted parameter: :format
+Completed 500 Internal Server Error in 20706ms (ActiveRecord: 5.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `block in create'
+app/controllers/urls_controller.rb:34:in `block in create'
+app/controllers/urls_controller.rb:32:in `create'
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-05 18:00:43 -0500
+  [1m[35m (0.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://google.com"}
+Unpermitted parameter: :format
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/urls_controller.rb:33
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/urls_controller.rb:33
+Completed 422 Unprocessable Entity in 10152ms (Views: 0.4ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-05 18:04:25 -0500
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://google.com"}
+Unpermitted parameter: :format
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ (pry):4
+  [1m[36mUrl Create (0.5ms)[0m  [1m[32mINSERT INTO `urls` (`original_url`, `shortened_url`, `created_at`, `updated_at`) VALUES ('https://google.com', 'Dl5lQQ', '2019-01-05 23:04:49', '2019-01-05 23:04:49')[0m
+  ↳ (pry):4
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ (pry):4
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/urls_controller.rb:34
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/urls_controller.rb:34
+Completed 500 Internal Server Error in 47185ms (ActiveRecord: 4.2ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 3, expected 0..2)):
+  
+app/controllers/urls_controller.rb:36:in `block (2 levels) in create'
+app/controllers/urls_controller.rb:32:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUrl Load (1.8ms)[0m  [1m[34mSELECT `urls`.* FROM `urls`[0m
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT `urls`.* FROM `urls`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUrl Destroy (0.5ms)[0m  [1m[31mDELETE FROM `urls` WHERE `urls`.`id` = 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-05 18:09:46 -0500
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://google.com"}
+Unpermitted parameter: :format
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/urls_controller.rb:34
+  [1m[36mUrl Create (0.4ms)[0m  [1m[32mINSERT INTO `urls` (`original_url`, `shortened_url`, `created_at`, `updated_at`) VALUES ('https://google.com', 'QGBVXX', '2019-01-05 23:23:15', '2019-01-05 23:23:15')[0m
+  ↳ app/controllers/urls_controller.rb:34
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/urls_controller.rb:34
+Completed 200 OK in 808924ms (Views: 0.1ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-05 18:24:51 -0500
+  [1m[35m (0.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://google.com"}
+Unpermitted parameter: :format
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/urls_controller.rb:34
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-05 18:27:28 -0500
+  [1m[35m (0.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://google.com"}
+Unpermitted parameter: :format
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/urls_controller.rb:34
+  [1m[36mUrl Create (0.4ms)[0m  [1m[32mINSERT INTO `urls` (`original_url`, `shortened_url`, `created_at`, `updated_at`) VALUES ('https://google.com', 'localhost:3000/g70itx', '2019-01-05 23:27:38', '2019-01-05 23:27:38')[0m
+  ↳ app/controllers/urls_controller.rb:34
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/urls_controller.rb:34
+Completed 200 OK in 10612ms (Views: 0.2ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-05 18:41:29 -0500
+  [1m[35m (0.4ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://facebook.com"}
+Unpermitted parameter: :format
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/urls_controller.rb:31
+  [1m[36mUrl Create (0.3ms)[0m  [1m[32mINSERT INTO `urls` (`original_url`, `shortened_url`, `created_at`, `updated_at`) VALUES ('https://facebook.com', 'localhost:3000/W2D9aS', '2019-01-05 23:41:29', '2019-01-05 23:41:29')[0m
+  ↳ app/controllers/urls_controller.rb:31
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/urls_controller.rb:31
+Completed 200 OK in 17ms (Views: 0.2ms | ActiveRecord: 5.6ms)
+
+
+  [1m[35m (0.8ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT `urls`.* FROM `urls`[0m
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT  `urls`.* FROM `urls` ORDER BY `urls`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUrl Destroy (0.6ms)[0m  [1m[31mDELETE FROM `urls` WHERE `urls`.`id` = 2[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Started HEAD "/g70itx" for 127.0.0.1 at 2019-01-05 19:44:03 -0500
+  [1m[35m (0.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [HEAD] "/g70itx"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/g70itx" for 127.0.0.1 at 2019-01-05 19:52:34 -0500
+  [1m[35m (0.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/g70itx"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/g70itx" for 127.0.0.1 at 2019-01-05 19:52:48 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/g70itx"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-05 19:59:17 -0500
+  [1m[35m (0.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://google.com"}
+Unpermitted parameter: :format
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/urls_controller.rb:32
+  [1m[36mUrl Create (0.3ms)[0m  [1m[32mINSERT INTO `urls` (`original_url`, `shortened_url`, `created_at`, `updated_at`) VALUES ('https://google.com', 'localhost:3000/s4kXce', '2019-01-06 00:59:17', '2019-01-06 00:59:17')[0m
+  ↳ app/controllers/urls_controller.rb:32
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/urls_controller.rb:32
+Completed 200 OK in 13ms (Views: 0.1ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/s4kXce" for 127.0.0.1 at 2019-01-05 19:59:31 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/s4kXce"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/g70itx" for 127.0.0.1 at 2019-01-05 20:01:46 -0500
+Processing by UrlsController#show as */*
+  Parameters: {"short_url"=>"g70itx"}
+Completed 404 Not Found in 5ms (ActiveRecord: 1.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Url without an ID):
+  
+app/controllers/urls_controller.rb:69:in `set_url'
+Started GET "/g70itx" for 127.0.0.1 at 2019-01-05 20:02:08 -0500
+Processing by UrlsController#show as */*
+  Parameters: {"short_url"=>"g70itx"}
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Url without an ID):
+  
+app/controllers/urls_controller.rb:69:in `set_url'
+Started GET "/g70itx" for 127.0.0.1 at 2019-01-05 20:50:48 -0500
+  [1m[35m (0.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UrlsController#show as */*
+  Parameters: {"short_url"=>"g70itx"}
+  Rendering urls/show.html.erb within layouts/application
+  Rendered urls/show.html.erb within layouts/application (17.1ms)
+Completed 500 Internal Server Error in 328343ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"urls", :id=>nil, :short_url=>"g70itx"}, possible unmatched constraints: [:id]):
+    1: <p id="notice"><%= notice %></p>
+    2: 
+    3: <%= link_to 'Edit', edit_url_path(@url) %> |
+    4: <%= link_to 'Back', urls_path %>
+  
+app/views/urls/show.html.erb:3:in `_app_views_urls_show_html_erb__989092496167193917_70309749606600'
+Started GET "/g70itx" for 127.0.0.1 at 2019-01-05 20:56:27 -0500
+  [1m[35m (0.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UrlsController#show as */*
+  Parameters: {"short_url"=>"g70itx"}
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT  `urls`.* FROM `urls` WHERE `urls`.`id` = 0 LIMIT 1[0m
+  ↳ app/controllers/urls_controller.rb:15
+Completed 404 Not Found in 10ms (ActiveRecord: 1.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Url with 'id'=g70itx):
+  
+app/controllers/urls_controller.rb:15:in `show'
+  [1m[35m (1.5ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUrl Load (2.9ms)[0m  [1m[34mSELECT `urls`.* FROM `urls`[0m
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT `urls`.* FROM `urls`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUrl Destroy (0.3ms)[0m  [1m[31mDELETE FROM `urls` WHERE `urls`.`id` = 3[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUrl Destroy (0.2ms)[0m  [1m[31mDELETE FROM `urls` WHERE `urls`.`id` = 4[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUrl Destroy (0.2ms)[0m  [1m[31mDELETE FROM `urls` WHERE `urls`.`id` = 5[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUrl Load (2.1ms)[0m  [1m[34mSELECT `urls`.* FROM `urls`[0m
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-05 21:09:26 -0500
+  [1m[35m (0.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://google.com"}
+Unpermitted parameter: :format
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/urls_controller.rb:34
+  [1m[36mUrl Create (0.3ms)[0m  [1m[32mINSERT INTO `urls` (`original_url`, `shortened_url`, `created_at`, `updated_at`) VALUES ('https://google.com', 'osJRPt', '2019-01-06 02:09:26', '2019-01-06 02:09:26')[0m
+  ↳ app/controllers/urls_controller.rb:34
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/urls_controller.rb:34
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-05 21:10:47 -0500
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://google.com"}
+Unpermitted parameter: :format
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/urls_controller.rb:34
+  [1m[36mUrl Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `urls` WHERE `urls`.`original_url` = BINARY 'https://google.com' LIMIT 1[0m
+  ↳ app/controllers/urls_controller.rb:34
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/urls_controller.rb:34
+Completed 200 OK in 13ms (Views: 0.1ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-05 21:11:16 -0500
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://google.com"}
+Unpermitted parameter: :format
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/urls_controller.rb:34
+  [1m[36mUrl Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `urls` WHERE `urls`.`original_url` = BINARY 'https://google.com' LIMIT 1[0m
+  ↳ app/controllers/urls_controller.rb:34
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/urls_controller.rb:34
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-05 21:11:36 -0500
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://facebook.com"}
+Unpermitted parameter: :format
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/urls_controller.rb:34
+  [1m[36mUrl Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `urls` WHERE `urls`.`original_url` = BINARY 'https://facebook.com' LIMIT 1[0m
+  ↳ app/controllers/urls_controller.rb:34
+  [1m[36mUrl Create (0.3ms)[0m  [1m[32mINSERT INTO `urls` (`original_url`, `shortened_url`, `created_at`, `updated_at`) VALUES ('https://facebook.com', 'ufdfBo', '2019-01-06 02:11:36', '2019-01-06 02:11:36')[0m
+  ↳ app/controllers/urls_controller.rb:34
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/urls_controller.rb:34
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-05 21:11:44 -0500
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://nfl.com"}
+Unpermitted parameter: :format
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/urls_controller.rb:34
+  [1m[36mUrl Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `urls` WHERE `urls`.`original_url` = BINARY 'https://nfl.com' LIMIT 1[0m
+  ↳ app/controllers/urls_controller.rb:34
+  [1m[36mUrl Create (0.3ms)[0m  [1m[32mINSERT INTO `urls` (`original_url`, `shortened_url`, `created_at`, `updated_at`) VALUES ('https://nfl.com', 'IvKjb4', '2019-01-06 02:11:44', '2019-01-06 02:11:44')[0m
+  ↳ app/controllers/urls_controller.rb:34
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/urls_controller.rb:34
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-05 21:13:21 -0500
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://yahoo.com"}
+Unpermitted parameter: :format
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/urls_controller.rb:34
+  [1m[36mUrl Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `urls` WHERE `urls`.`original_url` = BINARY 'https://yahoo.com' LIMIT 1[0m
+  ↳ app/controllers/urls_controller.rb:34
+  [1m[36mUrl Create (0.2ms)[0m  [1m[32mINSERT INTO `urls` (`original_url`, `shortened_url`, `created_at`, `updated_at`) VALUES ('https://yahoo.com', 'U9PHZb', '2019-01-06 02:13:21', '2019-01-06 02:13:21')[0m
+  ↳ app/controllers/urls_controller.rb:34
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/urls_controller.rb:34
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-05 21:13:31 -0500
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://merchdirect.com"}
+Unpermitted parameter: :format
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/urls_controller.rb:34
+  [1m[36mUrl Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `urls` WHERE `urls`.`original_url` = BINARY 'https://merchdirect.com' LIMIT 1[0m
+  ↳ app/controllers/urls_controller.rb:34
+  [1m[36mUrl Create (0.2ms)[0m  [1m[32mINSERT INTO `urls` (`original_url`, `shortened_url`, `created_at`, `updated_at`) VALUES ('https://merchdirect.com', 'V9R4go', '2019-01-06 02:13:31', '2019-01-06 02:13:31')[0m
+  ↳ app/controllers/urls_controller.rb:34
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/urls_controller.rb:34
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-05 21:13:41 -0500
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://nygiants.com"}
+Unpermitted parameter: :format
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/urls_controller.rb:34
+  [1m[36mUrl Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `urls` WHERE `urls`.`original_url` = BINARY 'https://nygiants.com' LIMIT 1[0m
+  ↳ app/controllers/urls_controller.rb:34
+  [1m[36mUrl Create (0.2ms)[0m  [1m[32mINSERT INTO `urls` (`original_url`, `shortened_url`, `created_at`, `updated_at`) VALUES ('https://nygiants.com', 'pMaQBk', '2019-01-06 02:13:41', '2019-01-06 02:13:41')[0m
+  ↳ app/controllers/urls_controller.rb:34
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/urls_controller.rb:34
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-05 21:14:55 -0500
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://njstate.com"}
+Unpermitted parameter: :format
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/urls_controller.rb:34
+  [1m[36mUrl Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `urls` WHERE `urls`.`original_url` = BINARY 'https://njstate.com' LIMIT 1[0m
+  ↳ app/controllers/urls_controller.rb:34
+  [1m[36mUrl Create (0.2ms)[0m  [1m[32mINSERT INTO `urls` (`original_url`, `shortened_url`, `created_at`, `updated_at`) VALUES ('https://njstate.com', 'vshpOm', '2019-01-06 02:14:55', '2019-01-06 02:14:55')[0m
+  ↳ app/controllers/urls_controller.rb:34
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/urls_controller.rb:34
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.6ms)
+
+
+  [1m[35m (0.4ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT `urls`.* FROM `urls`[0m
+Started GET "/osJRPt" for 127.0.0.1 at 2019-01-05 21:16:26 -0500
+Processing by UrlsController#show as */*
+  Parameters: {"short_url"=>"osJRPt"}
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  `urls`.* FROM `urls` WHERE `urls`.`id` = 0 LIMIT 1[0m
+  ↳ app/controllers/urls_controller.rb:15
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Url with 'id'=osJRPt):
+  
+app/controllers/urls_controller.rb:15:in `show'
+Started GET "/osJRPt" for 127.0.0.1 at 2019-01-05 21:17:23 -0500
+Processing by UrlsController#show as */*
+  Parameters: {"shortened_url"=>"osJRPt"}
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  `urls`.* FROM `urls` WHERE `urls`.`shortened_url` = 'osJRPt' LIMIT 1[0m
+  ↳ app/controllers/urls_controller.rb:15
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/osJt" for 127.0.0.1 at 2019-01-05 21:17:30 -0500
+Processing by UrlsController#show as */*
+  Parameters: {"shortened_url"=>"osJt"}
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  `urls`.* FROM `urls` WHERE `urls`.`shortened_url` = 'osJt' LIMIT 1[0m
+  ↳ app/controllers/urls_controller.rb:15
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+  [1m[35m (22.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('3560564728303329810', 0)[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateUrls (20190103040816)
+  [1m[35m (12.5ms)[0m  [1m[35mDROP TABLE `urls`[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.8ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20190103040816'[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('3560564728303329810')[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('3560564728303329810', 0)[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (11.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateUrls (20190103040816)
+  [1m[35m (26.3ms)[0m  [1m[35mCREATE TABLE `urls` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `original_url` varchar(255), `shortened_url` varchar(255), `count` int DEFAULT 0, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20190103040816_create_urls.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190103040816')[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('3560564728303329810')[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/bin/rake:23
+Started GET "/osJRPt" for 127.0.0.1 at 2019-01-05 21:38:04 -0500
+  [1m[35m (0.2ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UrlsController#show as */*
+  Parameters: {"shortened_url"=>"osJRPt"}
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  `urls`.* FROM `urls` WHERE `urls`.`shortened_url` = 'osJRPt' LIMIT 1[0m
+  ↳ app/controllers/urls_controller.rb:17
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/osJRPt" for 127.0.0.1 at 2019-01-05 21:40:48 -0500
+Processing by UrlsController#show as */*
+  Parameters: {"shortened_url"=>"osJRPt"}
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  `urls`.* FROM `urls` WHERE `urls`.`shortened_url` = 'osJRPt' LIMIT 1[0m
+  ↳ app/controllers/urls_controller.rb:17
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+  [1m[35m (0.4ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT `urls`.* FROM `urls`[0m
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-05 21:41:26 -0500
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://njstate.com"}
+Unpermitted parameter: :format
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/urls_controller.rb:36
+  [1m[36mUrl Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `urls` WHERE `urls`.`original_url` = BINARY 'https://njstate.com' LIMIT 1[0m
+  ↳ app/controllers/urls_controller.rb:36
+  [1m[36mUrl Create (0.2ms)[0m  [1m[32mINSERT INTO `urls` (`original_url`, `shortened_url`, `created_at`, `updated_at`) VALUES ('https://njstate.com', 'UX1qnv', '2019-01-06 02:41:26', '2019-01-06 02:41:26')[0m
+  ↳ app/controllers/urls_controller.rb:36
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/urls_controller.rb:36
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-05 21:41:31 -0500
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://nygiants.com"}
+Unpermitted parameter: :format
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/urls_controller.rb:36
+  [1m[36mUrl Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `urls` WHERE `urls`.`original_url` = BINARY 'https://nygiants.com' LIMIT 1[0m
+  ↳ app/controllers/urls_controller.rb:36
+  [1m[36mUrl Create (0.2ms)[0m  [1m[32mINSERT INTO `urls` (`original_url`, `shortened_url`, `created_at`, `updated_at`) VALUES ('https://nygiants.com', 'RItpwS', '2019-01-06 02:41:31', '2019-01-06 02:41:31')[0m
+  ↳ app/controllers/urls_controller.rb:36
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/urls_controller.rb:36
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-05 21:41:35 -0500
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://merchdirect.com"}
+Unpermitted parameter: :format
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/urls_controller.rb:36
+  [1m[36mUrl Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `urls` WHERE `urls`.`original_url` = BINARY 'https://merchdirect.com' LIMIT 1[0m
+  ↳ app/controllers/urls_controller.rb:36
+  [1m[36mUrl Create (0.2ms)[0m  [1m[32mINSERT INTO `urls` (`original_url`, `shortened_url`, `created_at`, `updated_at`) VALUES ('https://merchdirect.com', '5TzbGx', '2019-01-06 02:41:35', '2019-01-06 02:41:35')[0m
+  ↳ app/controllers/urls_controller.rb:36
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/urls_controller.rb:36
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-05 21:42:59 -0500
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://yahoo.com"}
+Unpermitted parameter: :format
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/urls_controller.rb:36
+  [1m[36mUrl Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `urls` WHERE `urls`.`original_url` = BINARY 'https://yahoo.com' LIMIT 1[0m
+  ↳ app/controllers/urls_controller.rb:36
+  [1m[36mUrl Create (0.2ms)[0m  [1m[32mINSERT INTO `urls` (`original_url`, `shortened_url`, `created_at`, `updated_at`) VALUES ('https://yahoo.com', 'OmAul8', '2019-01-06 02:42:59', '2019-01-06 02:42:59')[0m
+  ↳ app/controllers/urls_controller.rb:36
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/urls_controller.rb:36
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-05 21:43:27 -0500
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://nfl.com"}
+Unpermitted parameter: :format
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/urls_controller.rb:36
+  [1m[36mUrl Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM `urls` WHERE `urls`.`original_url` = BINARY 'https://nfl.com' LIMIT 1[0m
+  ↳ app/controllers/urls_controller.rb:36
+  [1m[36mUrl Create (0.3ms)[0m  [1m[32mINSERT INTO `urls` (`original_url`, `shortened_url`, `created_at`, `updated_at`) VALUES ('https://nfl.com', 'H7Hiuw', '2019-01-06 02:43:27', '2019-01-06 02:43:27')[0m
+  ↳ app/controllers/urls_controller.rb:36
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/urls_controller.rb:36
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-05 21:43:32 -0500
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://facebook.com"}
+Unpermitted parameter: :format
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/urls_controller.rb:36
+  [1m[36mUrl Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `urls` WHERE `urls`.`original_url` = BINARY 'https://facebook.com' LIMIT 1[0m
+  ↳ app/controllers/urls_controller.rb:36
+  [1m[36mUrl Create (0.2ms)[0m  [1m[32mINSERT INTO `urls` (`original_url`, `shortened_url`, `created_at`, `updated_at`) VALUES ('https://facebook.com', 'y2mnwq', '2019-01-06 02:43:32', '2019-01-06 02:43:32')[0m
+  ↳ app/controllers/urls_controller.rb:36
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/urls_controller.rb:36
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-05 21:43:37 -0500
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://google.com"}
+Unpermitted parameter: :format
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/urls_controller.rb:36
+  [1m[36mUrl Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `urls` WHERE `urls`.`original_url` = BINARY 'https://google.com' LIMIT 1[0m
+  ↳ app/controllers/urls_controller.rb:36
+  [1m[36mUrl Create (0.2ms)[0m  [1m[32mINSERT INTO `urls` (`original_url`, `shortened_url`, `created_at`, `updated_at`) VALUES ('https://google.com', 'p5NTze', '2019-01-06 02:43:37', '2019-01-06 02:43:37')[0m
+  ↳ app/controllers/urls_controller.rb:36
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/urls_controller.rb:36
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 1.6ms)
+
+
+  [1m[35m (0.4ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT `urls`.* FROM `urls`[0m
+Started GET "/p5NTze" for 127.0.0.1 at 2019-01-05 21:44:02 -0500
+Processing by UrlsController#show as */*
+  Parameters: {"shortened_url"=>"p5NTze"}
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  `urls`.* FROM `urls` WHERE `urls`.`shortened_url` = 'p5NTze' LIMIT 1[0m
+  ↳ app/controllers/urls_controller.rb:17
+Completed 500 Internal Server Error in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 2)):
+  
+app/controllers/urls_controller.rb:74:in `increment_count'
+Started GET "/p5NTze" for 127.0.0.1 at 2019-01-05 21:45:28 -0500
+Processing by UrlsController#show as */*
+  Parameters: {"shortened_url"=>"p5NTze"}
+  [1m[36mUrl Load (0.5ms)[0m  [1m[34mSELECT  `urls`.* FROM `urls` WHERE `urls`.`shortened_url` = 'p5NTze' LIMIT 1[0m
+  ↳ app/controllers/urls_controller.rb:17
+Completed 500 Internal Server Error in 128ms (Views: 0.2ms | ActiveRecord: 1.6ms)
+
+
+  
+NameError (undefined local variable or method `count' for #<UrlsController:0x00007f82f55b05e8>):
+  
+app/controllers/urls_controller.rb:74:in `increment_count'
+Started GET "/p5NTze" for 127.0.0.1 at 2019-01-05 21:46:18 -0500
+Processing by UrlsController#show as */*
+  Parameters: {"shortened_url"=>"p5NTze"}
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  `urls`.* FROM `urls` WHERE `urls`.`shortened_url` = 'p5NTze' LIMIT 1[0m
+  ↳ app/controllers/urls_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/urls_controller.rb:74
+  [1m[36mUrl Update (0.9ms)[0m  [1m[33mUPDATE `urls` SET `count` = 1, `shortened_url` = 'NGyYiu', `updated_at` = '2019-01-06 02:46:18' WHERE `urls`.`id` = 7[0m
+  ↳ app/controllers/urls_controller.rb:74
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/urls_controller.rb:74
+Completed 200 OK in 14ms (Views: 0.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/p5NTze" for 127.0.0.1 at 2019-01-05 21:46:22 -0500
+Processing by UrlsController#show as */*
+  Parameters: {"shortened_url"=>"p5NTze"}
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  `urls`.* FROM `urls` WHERE `urls`.`shortened_url` = 'p5NTze' LIMIT 1[0m
+  ↳ app/controllers/urls_controller.rb:17
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/p5NTze" for 127.0.0.1 at 2019-01-05 21:46:24 -0500
+Processing by UrlsController#show as */*
+  Parameters: {"shortened_url"=>"p5NTze"}
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  `urls`.* FROM `urls` WHERE `urls`.`shortened_url` = 'p5NTze' LIMIT 1[0m
+  ↳ app/controllers/urls_controller.rb:17
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+  [1m[35m (0.4ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  `urls`.* FROM `urls` ORDER BY `urls`.`id` DESC LIMIT 1[0m
+Started GET "/p5NTze" for 127.0.0.1 at 2019-01-05 21:47:17 -0500
+Processing by UrlsController#show as */*
+  Parameters: {"shortened_url"=>"p5NTze"}
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  `urls`.* FROM `urls` WHERE `urls`.`shortened_url` = 'p5NTze' LIMIT 1[0m
+  ↳ app/controllers/urls_controller.rb:17
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/p5NTze" for 127.0.0.1 at 2019-01-05 21:47:41 -0500
+Processing by UrlsController#show as */*
+  Parameters: {"shortened_url"=>"p5NTze"}
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  `urls`.* FROM `urls` WHERE `urls`.`shortened_url` = 'p5NTze' LIMIT 1[0m
+  ↳ app/controllers/urls_controller.rb:17
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/NGyYiu" for 127.0.0.1 at 2019-01-05 21:47:58 -0500
+Processing by UrlsController#show as */*
+  Parameters: {"shortened_url"=>"NGyYiu"}
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  `urls`.* FROM `urls` WHERE `urls`.`shortened_url` = 'NGyYiu' LIMIT 1[0m
+  ↳ app/controllers/urls_controller.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/urls_controller.rb:74
+  [1m[36mUrl Update (1.3ms)[0m  [1m[33mUPDATE `urls` SET `count` = 2, `shortened_url` = '7fry7K', `updated_at` = '2019-01-06 02:47:58' WHERE `urls`.`id` = 7[0m
+  ↳ app/controllers/urls_controller.rb:74
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/urls_controller.rb:74
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/NGyYiu" for 127.0.0.1 at 2019-01-05 21:47:59 -0500
+Processing by UrlsController#show as */*
+  Parameters: {"shortened_url"=>"NGyYiu"}
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  `urls`.* FROM `urls` WHERE `urls`.`shortened_url` = 'NGyYiu' LIMIT 1[0m
+  ↳ app/controllers/urls_controller.rb:17
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/NGyYiu" for 127.0.0.1 at 2019-01-05 21:48:04 -0500
+Processing by UrlsController#show as */*
+  Parameters: {"shortened_url"=>"NGyYiu"}
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  `urls`.* FROM `urls` WHERE `urls`.`shortened_url` = 'NGyYiu' LIMIT 1[0m
+  ↳ app/controllers/urls_controller.rb:17
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/NGyYiu" for 127.0.0.1 at 2019-01-05 21:48:05 -0500
+Processing by UrlsController#show as */*
+  Parameters: {"shortened_url"=>"NGyYiu"}
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT  `urls`.* FROM `urls` WHERE `urls`.`shortened_url` = 'NGyYiu' LIMIT 1[0m
+  ↳ app/controllers/urls_controller.rb:17
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  `urls`.* FROM `urls` ORDER BY `urls`.`id` DESC LIMIT 1[0m
+Started GET "/7fry7K" for 127.0.0.1 at 2019-01-05 21:48:38 -0500
+Processing by UrlsController#show as */*
+  Parameters: {"shortened_url"=>"7fry7K"}
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  `urls`.* FROM `urls` WHERE `urls`.`shortened_url` = '7fry7K' LIMIT 1[0m
+  ↳ app/controllers/urls_controller.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/urls_controller.rb:74
+  [1m[36mUrl Update (0.6ms)[0m  [1m[33mUPDATE `urls` SET `count` = 3, `updated_at` = '2019-01-06 02:48:38' WHERE `urls`.`id` = 7[0m
+  ↳ app/controllers/urls_controller.rb:74
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/urls_controller.rb:74
+Completed 200 OK in 14ms (Views: 0.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/7fry7K" for 127.0.0.1 at 2019-01-05 21:48:40 -0500
+Processing by UrlsController#show as */*
+  Parameters: {"shortened_url"=>"7fry7K"}
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  `urls`.* FROM `urls` WHERE `urls`.`shortened_url` = '7fry7K' LIMIT 1[0m
+  ↳ app/controllers/urls_controller.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/urls_controller.rb:74
+  [1m[36mUrl Update (3.0ms)[0m  [1m[33mUPDATE `urls` SET `count` = 4, `updated_at` = '2019-01-06 02:48:40' WHERE `urls`.`id` = 7[0m
+  ↳ app/controllers/urls_controller.rb:74
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/urls_controller.rb:74
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/7fry7K" for 127.0.0.1 at 2019-01-05 21:48:41 -0500
+Processing by UrlsController#show as */*
+  Parameters: {"shortened_url"=>"7fry7K"}
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  `urls`.* FROM `urls` WHERE `urls`.`shortened_url` = '7fry7K' LIMIT 1[0m
+  ↳ app/controllers/urls_controller.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/urls_controller.rb:74
+  [1m[36mUrl Update (2.3ms)[0m  [1m[33mUPDATE `urls` SET `count` = 5, `updated_at` = '2019-01-06 02:48:41' WHERE `urls`.`id` = 7[0m
+  ↳ app/controllers/urls_controller.rb:74
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/urls_controller.rb:74
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/7fry7K" for 127.0.0.1 at 2019-01-05 21:48:41 -0500
+Processing by UrlsController#show as */*
+  Parameters: {"shortened_url"=>"7fry7K"}
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT  `urls`.* FROM `urls` WHERE `urls`.`shortened_url` = '7fry7K' LIMIT 1[0m
+  ↳ app/controllers/urls_controller.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/urls_controller.rb:74
+  [1m[36mUrl Update (0.6ms)[0m  [1m[33mUPDATE `urls` SET `count` = 6 WHERE `urls`.`id` = 7[0m
+  ↳ app/controllers/urls_controller.rb:74
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/urls_controller.rb:74
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/7fry7K" for 127.0.0.1 at 2019-01-05 21:48:42 -0500
+Processing by UrlsController#show as */*
+  Parameters: {"shortened_url"=>"7fry7K"}
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  `urls`.* FROM `urls` WHERE `urls`.`shortened_url` = '7fry7K' LIMIT 1[0m
+  ↳ app/controllers/urls_controller.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/urls_controller.rb:74
+  [1m[36mUrl Update (2.4ms)[0m  [1m[33mUPDATE `urls` SET `count` = 7, `updated_at` = '2019-01-06 02:48:42' WHERE `urls`.`id` = 7[0m
+  ↳ app/controllers/urls_controller.rb:74
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/urls_controller.rb:74
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/7fry7K" for 127.0.0.1 at 2019-01-05 21:48:42 -0500
+Processing by UrlsController#show as */*
+  Parameters: {"shortened_url"=>"7fry7K"}
+  [1m[36mUrl Load (0.5ms)[0m  [1m[34mSELECT  `urls`.* FROM `urls` WHERE `urls`.`shortened_url` = '7fry7K' LIMIT 1[0m
+  ↳ app/controllers/urls_controller.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/urls_controller.rb:74
+  [1m[36mUrl Update (0.4ms)[0m  [1m[33mUPDATE `urls` SET `count` = 8 WHERE `urls`.`id` = 7[0m
+  ↳ app/controllers/urls_controller.rb:74
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/urls_controller.rb:74
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 1.3ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  `urls`.* FROM `urls` ORDER BY `urls`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUrl Load (0.9ms)[0m  [1m[34mSELECT `urls`.* FROM `urls`[0m
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT `urls`.* FROM `urls`[0m
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT `urls`.* FROM `urls`[0m
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT `urls`.* FROM `urls`[0m
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT `urls`.* FROM `urls`[0m
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT `urls`.* FROM `urls`[0m
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT `urls`.* FROM `urls`[0m
+Started GET "/top.json" for 127.0.0.1 at 2019-01-05 22:13:16 -0500
+  [1m[35m (0.2ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UrlsController#top_urls as JSON
+  [1m[36mUrl Load (0.5ms)[0m  [1m[34mSELECT `urls`.* FROM `urls`[0m
+  ↳ app/controllers/urls_controller.rb:71
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-05 22:51:25 -0500
+  [1m[35m (0.2ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://sling.com"}
+Unpermitted parameter: :format
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/urls_controller.rb:36
+  [1m[36mUrl Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `urls` WHERE `urls`.`original_url` = BINARY 'https://sling.com' LIMIT 1[0m
+  ↳ app/controllers/urls_controller.rb:36
+  [1m[36mUrl Create (0.3ms)[0m  [1m[32mINSERT INTO `urls` (`original_url`, `shortened_url`, `created_at`, `updated_at`) VALUES ('http://sling.com', 'EufGKT', '2019-01-06 03:51:25', '2019-01-06 03:51:25')[0m
+  ↳ app/controllers/urls_controller.rb:36
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/urls_controller.rb:36
+Completed 200 OK in 14ms (Views: 0.2ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-05 22:51:37 -0500
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://direct t v.com"}
+Unpermitted parameter: :format
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/urls_controller.rb:36
+  [1m[36mUrl Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `urls` WHERE `urls`.`original_url` = BINARY 'https://direct t v.com' LIMIT 1[0m
+  ↳ app/controllers/urls_controller.rb:36
+  [1m[36mUrl Create (0.3ms)[0m  [1m[32mINSERT INTO `urls` (`original_url`, `shortened_url`, `created_at`, `updated_at`) VALUES ('http://direct t v.com', 'I8HvEN', '2019-01-06 03:51:37', '2019-01-06 03:51:37')[0m
+  ↳ app/controllers/urls_controller.rb:36
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/urls_controller.rb:36
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 1.8ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  `urls`.* FROM `urls` ORDER BY `urls`.`id` DESC LIMIT 1[0m
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT  `urls`.* FROM `urls` ORDER BY `urls`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUrl Destroy (0.7ms)[0m  [1m[31mDELETE FROM `urls` WHERE `urls`.`id` = 9[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-05 22:52:54 -0500
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://direct t v.com"}
+Unpermitted parameter: :format
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/urls_controller.rb:36
+  [1m[36mUrl Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `urls` WHERE `urls`.`original_url` = BINARY 'https://direct t v.com' LIMIT 1[0m
+  ↳ app/controllers/urls_controller.rb:36
+  [1m[35m (0.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  `urls`.* FROM `urls` ORDER BY `urls`.`id` DESC LIMIT 1[0m
+Started POST "/urls.json" for 127.0.0.1 at 2019-01-05 23:47:50 -0500
+  [1m[35m (0.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UrlsController#create as JSON
+  Parameters: {"original_url"=>"https://netflix.com"}
+Unpermitted parameter: :format
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/urls_controller.rb:36
+  [1m[36mUrl Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `urls` WHERE `urls`.`original_url` = BINARY 'https://netflix.com' LIMIT 1[0m
+  ↳ app/controllers/urls_controller.rb:36
+  [1m[36mUrl Create (0.2ms)[0m  [1m[32mINSERT INTO `urls` (`original_url`, `shortened_url`, `created_at`, `updated_at`) VALUES ('http://netflix.com', '6BFbqU', '2019-01-06 04:47:50', '2019-01-06 04:47:50')[0m
+  ↳ app/controllers/urls_controller.rb:36
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/urls_controller.rb:36
+Completed 200 OK in 18ms (Views: 0.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/inventories" for 127.0.0.1 at 2019-01-06 23:18:47 -0500
+  [1m[35m (3.2ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UrlsController#show as HTML
+  Parameters: {"shortened_url"=>"inventories"}
+  [1m[36mUrl Load (0.5ms)[0m  [1m[34mSELECT  `urls`.* FROM `urls` WHERE `urls`.`shortened_url` = 'inventories' LIMIT 1[0m
+  ↳ app/controllers/urls_controller.rb:17
+Completed 200 OK in 17ms (Views: 0.5ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 23:18:48 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/vasu/.rvm/gems/ruby-2.5.1/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/vasu/.rvm/gems/ruby-2.5.1/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (3.9ms)
+Completed 200 OK in 14ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/top" for 127.0.0.1 at 2019-01-06 23:18:54 -0500
+Processing by UrlsController#top_urls as HTML
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT `urls`.* FROM `urls`[0m
+  ↳ app/controllers/urls_controller.rb:71
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/inventories" for 127.0.0.1 at 2019-01-07 00:58:03 -0500
+  [1m[35m (0.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/vasu/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UrlsController#show as HTML
+  Parameters: {"shortened_url"=>"inventories"}
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  `urls`.* FROM `urls` WHERE `urls`.`shortened_url` = 'inventories' LIMIT 1[0m
+  ↳ app/controllers/urls_controller.rb:17
+Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-07 00:58:05 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/vasu/.rvm/gems/ruby-2.5.1/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/vasu/.rvm/gems/ruby-2.5.1/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (3.2ms)
+Completed 200 OK in 11ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/top" for 127.0.0.1 at 2019-01-07 00:58:10 -0500
+Processing by UrlsController#top_urls as HTML
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT `urls`.* FROM `urls`[0m
+  ↳ app/controllers/urls_controller.rb:71
+Completed 200 OK in 17ms (Views: 0.3ms | ActiveRecord: 1.1ms)
+
+
